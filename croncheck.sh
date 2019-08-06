@@ -6,6 +6,11 @@ DEST=croncheck.md
 touch $DEST
 echo -e "# croncheck\n" > $DEST
 
+echo "## host" >> $DEST
+echo  "\`\`\`" >>$DEST
+hostname >>$DEST 2>&1
+echo -e "\`\`\`\n" >>$DEST
+
 echo "## os" >> $DEST
 echo  "\`\`\`" >>$DEST
 cat /etc/redhat-release >>$DEST 2>&1
